@@ -4,12 +4,7 @@
 		<Button id="guardar" backgroundImage="/blue-disk-icon.png"></Button>
 		
 		<TableView id="contactList">
-            	<TableViewRow>
-            		<View id="row">
-            			<Label id="contacto">Contacto</Label>
-            			<Switch id="check" type="Titanium.UI.Android.SWITCH_STYLE_CHECKBOX"></Switch>
-            		</View>
-	            </TableViewRow>
-        	</TableView>
+            	
+        </TableView>
 	</Window>
 </Alloy>
