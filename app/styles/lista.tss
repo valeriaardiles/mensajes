@@ -11,7 +11,7 @@
 
 "#contactList":{
 	top: "18%",
-	height: "20%"
+	height: "88%"
 },
 
 "#row":{
