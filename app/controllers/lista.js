@@ -17,7 +17,7 @@ for (var i=0, ilen=people.length; i<ilen; i++){
 			var vista = Ti.UI.createView({
 				borderColor: "#afafaf",
 				borderRadius: "5",
-				height: "40",
+				height: "50",
 				backgroundColor:'#e7e9e7',	
 			});	
 			
@@ -29,17 +29,17 @@ for (var i=0, ilen=people.length; i<ilen; i++){
 			
 			var check = Ti.UI.createSwitch({
 				type: Titanium.UI.Android.SWITCH_STYLE_CHECKBOX,
-				width: "35",
-				height: "35",
+				width: "45",
+				height: "45",
 				right: "3%",
 				borderColor: "#afafaf",
 				borderRadius: "5",
-				backgroundColor: "#fff",
-				color: "#fff",
+				//backgroundColor: "#fff",
+				//color: "#fff",
 				value: "false"
 			});
 			
-			
+			/*
 			 check.addEventListener('change', function(e){
 				Ti.API.info(check.value);
 				if(check.value == true){
@@ -50,6 +50,8 @@ for (var i=0, ilen=people.length; i<ilen; i++){
 					check.color = "#0071bc";
 				}	
 			});
+			
+			*/
 			
 			vista.add(nombreContacto);
 			vista.add(check);
