@@ -1,15 +1,3 @@
-$.ventana.open();
-
-$.check.addEventListener('click', function(e){
-	if($.check.value == true){
-		$.check.backgroundColor = "#fff";
-		$.check.color = "#fff";
-	} else{
-		$.check.backgroundColor = "#0071bc";
-		$.check.color = "#0071bc";
-	}
-	
-});
 
 var singleValue = ['id', 'fullName'];
 
@@ -20,6 +8,11 @@ var people = Ti.Contacts.getAllPeople();
 for (var i=0, ilen=people.length; i<ilen; i++){
 	var person = people[i];
 	
+	if (JSON.stringify(person[multiValue[1]]) != '{}'){
+		if (JSON.stringify(person[multiValue[0]]) != '{}'){
+			Ti.API.info('phone:' + JSON.stringify(person[multiValue[1]]));
+		}
+	}
 	var newContact = Ti.UI.createTableViewRow();
 	
 	var vista = Ti.UI.createView({
@@ -46,20 +39,25 @@ for (var i=0, ilen=people.length; i<ilen; i++){
 		color: "#fff"
 	});
 	
-	check.addEventListener('click', function(e){
-	if(check.value == true){
-		check.backgroundColor = "#fff";
-		check.color = "#fff";
-	} else{
-		check.backgroundColor = "#0071bc";
-		check.color = "#0071bc";
-	}
-	
+	/*
+	 check.addEventListener('click', function(e){
+		Ti.API.info('clicked');
+		if(check.value == true){
+			check.value = false;
+			check.backgroundColor = "#fff";
+			check.color = "#fff";
+		} else{
+			check.value = true;
+			check.backgroundColor = "#0071bc";
+			check.color = "#0071bc";
+		}	
 	});
-		
+	*/	
 	vista.add(nombreContacto);
 	vista.add(check);
 	newContact.add(vista);
 	$.contactList.appendRow(newContact);
 };
+
+$.ventana.open();
 

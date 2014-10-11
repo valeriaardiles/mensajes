@@ -5,7 +5,7 @@
     <version>1.0</version>
     <publisher>Valeria</publisher>
     <url>http://</url>
-    <description/>
+    <description>undefined</description>
     <copyright>2014 by Valeria</copyright>
     <icon>appicon.png</icon>
     <fullscreen>false</fullscreen>
@@ -44,7 +44,7 @@
 	        <application android:theme="@style/Theme.AppCompat.Translucent"/>
 	    </manifest>
 	</android>-->
- 	<mobileweb>
+    <mobileweb>
         <precache/>
         <splash>
             <enabled>true</enabled>
